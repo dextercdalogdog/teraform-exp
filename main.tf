@@ -103,7 +103,7 @@ resource "aws_lb" "alb" {
   security_groups    = [aws_security_group.sg_public.id]
   subnets            = [aws_subnet.subnet-a.id,aws_subnet.subnet-b.id,aws_subnet.subnet-c.id]
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 
   tags = {
     Environment = "test"
