@@ -26,18 +26,27 @@ resource "aws_subnet" "subnet-a" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = "10.10.0.0/20" 
   availability_zone = "ap-southeast-1a"
+ tags = {
+   Name = "az-subnet-ap-southeast-1a"
+ }
 }
 
 resource "aws_subnet" "subnet-b" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = "10.10.16.0/20" 
   availability_zone = "ap-southeast-1b"
+ tags = {
+   Name = "az-subnet-ap-southeast-1b"
+ }
 }
 
 resource "aws_subnet" "subnet-c" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = "10.10.32.0/20" 
   availability_zone = "ap-southeast-1c"
+ tags = {
+   Name = "az-subnet-ap-southeast-1c"
+ }
 }
 
 #Route Table
